@@ -1,0 +1,41 @@
+Lista de exercícios JS com eventos
+
+Leia um valor digitado no input e mostre em tempo real quantos caracteres foram digitados (oninput).
+
+Crie uma div que muda de cor quando o mouse passa sobre ela e volta à cor original quando o mouse sai (onmouseover e onmouseout).
+
+Mostre um alerta quando o usuário sair de um input (onblur).
+
+Habilite ou desabilite um botão dependendo se um checkbox está marcado (onchange).
+
+Conte quantas vezes um botão foi clicado e mostre o contador na tela (onclick).
+
+Altere o texto de um botão quando o mouse estiver sobre ele e volte ao texto original quando o mouse sair (onmouseover e onmouseout).
+
+Leia dois números e troque seus valores ao clicar em um botão.
+
+Leia um número e exiba se ele é par ou ímpar ao digitar (oninput).
+
+Crie um botão que, ao ser clicado, adicione um item em uma lista (ul ou ol) na página.
+
+Leia o nome de um usuário e mostre uma mensagem personalizada assim que ele terminar de digitar (onchange).
+
+Crie um input que não permita letras, apenas números (oninput).
+
+Leia uma temperatura em Celsius e converta para Fahrenheit ou vice-versa ao clicar em um botão.
+
+Crie um botão que muda a visibilidade de uma imagem na tela (onclick).
+
+Crie dois inputs para nota de provas e calcule a média ao clicar em um botão, mostrando na tela.
+
+Faça um input que muda a cor do fundo da página dependendo do valor digitado (oninput).
+
+Crie um botão que, ao ser clicado duas vezes rapidamente (ondblclick), exiba uma mensagem especial.
+
+Capture o pressionamento de uma tecla em um input e mostre o código da tecla (onkeydown ou onkeyup).
+
+Crie um botão que, ao passar o mouse, adiciona uma borda ao redor de uma div, e remove quando o mouse sai (mouseenter e mouseleave).
+
+Crie um formulário que, ao ser enviado, impede o envio padrão e mostra os dados digitados na tela (onsubmit).
+
+Crie um input que transforma automaticamente todas as letras digitadas em maiúsculas (oninput).

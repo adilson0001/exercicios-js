@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor</title>
+</head>
+<body>
+    <h1>Conversor de Dólar</h1>
+    <input type="number" placeholder="Valor em Reais" id="Numero">
+    <button onclick="Conversor()">Converter</button>
+</body>
+<script>
+    function Conversor(){
+        const num =document.querySelector("#Numero").value / 5;
+
+        document.querySelector("#Numero").value=num
+        
+    }
+</script>
+</html>

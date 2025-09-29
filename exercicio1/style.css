@@ -1,0 +1,61 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+/* Corpo da página */
+body {
+  height: 100vh;
+  background-color: #5b8def; /* azul de fundo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header amarelo */
+header {
+  background-color: #ffd500; /* amarelo */
+  color: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Main centralizado */
+main {
+  flex: 1; /* ocupa o restante da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Formulário */
+.form-container {
+  background-color: #1e2a47; /* fundo escuro do formulário */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.form-container input {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+}
+
+.form-container button {
+  background-color: #6c5ce7; /* roxo */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #5a4cd1;
+}
