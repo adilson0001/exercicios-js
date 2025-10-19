@@ -1,0 +1,14 @@
+"Evitar valores negativos (desafio simples):
+Antes de subtrair, verifica se cont é maior que 0.
+
+Reset automático:
+Adiciona um botão 'Zerar' que volta cont pra 0.
+
+Animação ou cor:
+Quando o valor for positivo, muda a cor pra verde; negativo, vermelho.
+
+Usar textContent ao invés de innerHTML:
+Como você só mostra texto, textContent é um pouquinho mais rápido e seguro.
+
+Manter valor na tela mesmo se atualizar:
+Dá pra guardar o valor com localStorage e restaurar quando a página recarrega."

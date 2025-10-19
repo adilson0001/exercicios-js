@@ -39,6 +39,13 @@ button:hover {
   text-align: center;
 }
 
+.vermelho{
+  color: red;
+
+}
+.verde{
+  color: green;
+}
 
 .reset{
   position: relative;
