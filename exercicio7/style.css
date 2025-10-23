@@ -8,11 +8,12 @@
 :root{
     --fundo:#343A40;
     --azul:#5C88CA;
-    --fundoDiv:#212529;
+    --fundoDiv:#16191b;
+    --fundoDivHover:#212529;
     --fundoAdd:#5D8ACD;
-    
+    --fundoAddHover:#4a6fa7;    
     --cinza:rgb(211, 211, 211);
-
+    --branco:white;
     --fonte:"Inter", sans-serif;
 
 }
@@ -40,8 +41,9 @@ body{
     width:100%;
     height: 100%;
     justify-content: space-around;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 5px;
+    box-shadow: 0px 0px 30px 4px rgba(0,0,0,0.29);
 
 }
 
@@ -63,6 +65,52 @@ body{
 .numero p{
     color: var(--cinza);
     
+}
+
+/* adicionar tarefa */
+
+
+.tarefa{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+.tarefa>input{
+    padding: 5px;
+    width: 85%;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--fundoDiv);
+    font-size: 15px;
+    color:var(--cinza);
+    transition: .5s;
+    
+}
+.tarefa > input:hover {
+  background-color: var(--fundoDivHover);
+  transition: .5s;
+}
+.tarefa>button{
+    padding: 2px;
+    width: 12%;
+    background-color: var(--fundoAdd);
+    border: none;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 15px;
+    transition: .5s;
+
+}
+
+
+.tarefa>button:hover{
+    background-color: var(--fundoAddHover);
+    transition: .5s;
+    cursor: pointer;
 }
 
 
