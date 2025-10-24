@@ -23,6 +23,7 @@ body{
     flex-direction: column;  
     align-items: center;
     width: 100vw;
+    min-width: 650px;
     height: 100vh;
     background-color: var(--fundo);
 }
@@ -32,6 +33,9 @@ body{
     background-color: transparent;
     width: 60vw;
     height: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     /* 70vw no @media */
 }
 
@@ -73,8 +77,9 @@ body{
 .tarefa{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 101%;
     margin-top: 20px;
+    gap: 10px;
     
 }
 
@@ -95,8 +100,9 @@ body{
   transition: .5s;
 }
 .tarefa>button{
-    padding: 2px;
-    width: 12%;
+    padding: 3px;
+    width: 13%;
+    min-width: 82px;
     background-color: var(--fundoAdd);
     border: none;
     border-radius: 8px;
@@ -112,6 +118,13 @@ body{
     transition: .5s;
     cursor: pointer;
 }
+
+/* filtro de tarefas */
+
+
+
+
+
 
 
 
