@@ -23,14 +23,30 @@
             </div>
         </div>
         <div class="tarefa">
-            <input type="text" name="" id="" placeholder="Adicione uma nova tarefa...">
+            <input type="text"  id="campo" placeholder="Adicione uma nova tarefa...">
             <button>+ Adicionar</button>
         </div>
         <div class="filtros">
-            <select name="" id="" >
-                <option value="A" selected >Todas as Tarefas</option>
-                <option value="A" >Todas aaaaaaaaas Tarefas</option>
+            <select  id="#" class="filtro">
+                <option value="A"  selected >Todas</option>
+                <option value="A" >Recentes</option>
+                <option value="A" >Concluidas</option>
+                <option value="A" >Pendentes</option>
             </select>
+
+            <!-- a ideia de filtrar por prioridade é que voce ao adicionar a tarefa ela vem como baixa prioridade, depois voce edita o texto e a prioridade -->
+            <select  id="#" class="filtro">
+                <option value="A"  selected >Prioridades</option>
+                <option value="A" >Urgente</option>
+                <option value="A" >Média</option>
+                <option value="A" >Baixa</option>
+            </select>
+
+            <div class="pesquisa">
+                <form action="#">
+                    <input type="search" id="campoBusca" placeholder="Procurar Tarefas...">
+                </form>
+            </div>
         </div>
     </div>
 </body>
