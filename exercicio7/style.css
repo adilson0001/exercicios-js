@@ -147,35 +147,49 @@ body {
     justify-content: start;
     border: none;
 }
-
 .pesquisar {
     display: flex;
-    justify-content: end;
+    justify-content: end; 
     width: 100%;
-    
 }
 
-.pesquisar img{
-    position: relative;
-    left: 20vw;
-    cursor: pointer;
-}
-form {
-    display: flex;
+.form-busca {
+    position: relative; 
+    
+    display: flex; 
     justify-content: end;
-    width: 100%;
+    width: 60%; 
+    min-width: 175px;
 }
 
 .pesquisa {
+    width: 100%; 
+    height: 30px;
+    
     background-color: var(--fundoDiv);
     color: var(--cinza);
-    height: 30px;
-    width: 60%;
     border-radius: 5px;
     font-size: 15px;
-    display: flex;
     border: none;
-    padding: 0px 15px;
+    
+    padding: 0px 40px 0px 15px; 
+}
+
+
+.icone-pesquisa {
+    
+    position: absolute; 
+    
+    top: 50%;
+    transform: translateY(-50%); 
+    
+   
+    right: 10px; 
+    
+    width: 18px; 
+    height: 18px;
+    cursor: pointer;
+    z-index: 2; 
    
 }
 
