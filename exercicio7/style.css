@@ -89,7 +89,7 @@ body {
 }
 
 .tarefa>input {
-    padding: 5px;
+    padding: 5px 5px 5px 10px;
     width: 85%;
     height: 30px;
     border-radius: 8px;
@@ -139,59 +139,88 @@ body {
 .filtro {
     background-color: var(--fundoDiv);
     color: var(--cinza);
-    height: 30px;
+    height: 35px;
     width: 20%;
-    min-width: 100px;
+    min-width: 110px;
     border-radius: 5px;
     font-size: 15px;
     display: flex;
     justify-content: start;
     border: none;
+    padding: 5px 5px 5px 10px;
 }
+
 .pesquisar {
     display: flex;
-    justify-content: end; 
+    justify-content: end;
     width: 100%;
 }
 
 .form-busca {
-    position: relative; 
-    
-    display: flex; 
+    position: relative;
+
+    display: flex;
     justify-content: end;
-    width: 60%; 
+    width: 60%;
     min-width: 175px;
 }
 
 .pesquisa {
-    width: 100%; 
-    height: 30px;
-    
+    width: 100%;
+    height: 35px;
+
     background-color: var(--fundoDiv);
     color: var(--cinza);
     border-radius: 5px;
     font-size: 15px;
     border: none;
-    
-    padding: 0px 40px 0px 15px; 
+
+    padding: 0px 40px 0px 15px;
 }
 
 
 .icone-pesquisa {
-    
-    position: absolute; 
-    
+
+    position: absolute;
+
     top: 50%;
-    transform: translateY(-50%); 
-    
-   
-    right: 10px; 
-    
-    width: 18px; 
+    transform: translateY(-50%);
+
+
+    right: 10px;
+
+    width: 18px;
     height: 18px;
-    cursor: pointer;
-    z-index: 2; 
-   
+    z-index: 2;
+    cursor: text;
+
+}
+
+
+/* lista de tarefas */
+
+.lista{
+    margin-top: 20px;
+    
+}
+
+.lista,.linha,.icons{
+    display: flex;
+    width: 100%;
+
+}
+.linha{
+    background-color: var(--fundoDiv);
+    color: var(--cinza);
+    font-family: var(--fonte);
+}
+.lista input{
+    margin-left: 15px;
+    margin-right: 5px ;
+}
+
+.icons{
+   justify-content: end;
 }
 
 
