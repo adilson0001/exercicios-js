@@ -15,7 +15,7 @@
     --fundoDivHover: #212529;
     --fundoAdd: #5D8ACD;
     --fundoAddHover: #4a6fa7;
-    --cinza: rgb(211, 211, 211);
+    --cinza: #d3d3d3;
     --branco: white;
     --fonte: "Inter", sans-serif;
 
@@ -207,16 +207,18 @@ body {
 .lista,.linha,.icons{
     display: flex;
     width: 100%;
+  
 
 }
 .linha{
     background-color: var(--fundoDiv);
     color: var(--cinza);
     font-family: var(--fonte);
+    padding: 9px;
 }
 .lista input{
     margin-left: 15px;
-    margin-right: 5px ;
+    margin-right: 10px ;
 }
 
 .icons{
