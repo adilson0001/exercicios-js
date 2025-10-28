@@ -26,8 +26,10 @@
             </div>
         </div>
         <div class="tarefa">
-            <input type="text" id="campo" placeholder="Adicione uma nova tarefa...">
-            <button>+ Adicionar</button>
+            <form action="#">
+                <input type="text" id="campo" placeholder="Adicione uma nova tarefa...">
+                <button>+ Adicionar</button>
+            </form>
         </div>
         <div class="filtros">
             <select id="#" class="filtro">
@@ -48,7 +50,7 @@
             <div class="pesquisar">
                 <form action="#" class="form-busca">
                     <input type="search" id="campoBusca" placeholder="Procurar..." class="pesquisa">
-                    <img src="search.svg" alt="simbolo de pesquisa" class="icone-pesquisa">
+                    <img src="imagens/search.svg" alt="simbolo de pesquisa" class="icone-pesquisa">
                 </form>
             </div>
 
@@ -58,14 +60,35 @@
         <div class="lista">
                 <div class="linha">
                     <input type="checkbox">
-                    <p>Treinar</p>
+                    <p>Estudar</p>
                     <div class="icons">
-                        <p>Medio</p>
-                        icone editar
-                        lixo
+                        <p class="medio">MEDIO</p>
+                        <img src="imagens/edit.svg" alt="icone de editar">
+                        <img src="imagens/delete.svg" alt="icone de excluir">
                     </div>
                 </div>
-            </div>
+
+                <div class="linha">
+                    <input type="checkbox">
+                    <p>Lavar Louça</p>
+                    <div class="icons">
+                        <p class="baixo">BAIXO</p>
+                        <img src="imagens/edit.svg" alt="icone de editar">
+                        <img src="imagens/delete.svg" alt="icone de excluir">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <input type="checkbox">
+                    <p>Treinar</p>
+                    <div class="icons">
+                        <p class="alto">ALTO</p>
+                        <img src="imagens/edit.svg" alt="icone de editar">
+                        <img src="imagens/delete.svg" alt="icone de excluir">
+                    </div>
+                </div>
+        </div>
+        
     </div>
 </body>
 

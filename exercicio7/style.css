@@ -19,6 +19,16 @@
     --branco: white;
     --fonte: "Inter", sans-serif;
 
+    --amarelo:#FCBE08;
+    --fundoAmarelo: #383526;
+
+    --azul:#17A2B2;
+    --fundoAzul:#203238;
+
+    --vermelho:#cf222d;
+    --fundoVermelho:#34262C;
+
+
 }
 
 body {
@@ -79,7 +89,7 @@ body {
 /* adicionar tarefa */
 
 
-.tarefa {
+.tarefa>form,.tarefa {
     display: flex;
     justify-content: space-between;
     width: 101%;
@@ -88,7 +98,7 @@ body {
 
 }
 
-.tarefa>input {
+.tarefa form>input {
     padding: 5px 5px 5px 10px;
     width: 85%;
     height: 30px;
@@ -101,12 +111,12 @@ body {
 
 }
 
-.tarefa>input:hover {
+.tarefa form>input:hover {
     background-color: var(--fundoDivHover);
     transition: .5s;
 }
 
-.tarefa>button {
+.tarefa form>button {
     padding: 3px;
     width: 13%;
     min-width: 82px;
@@ -120,7 +130,7 @@ body {
 }
 
 
-.tarefa>button:hover {
+.tarefa form>button:hover {
     background-color: var(--fundoAddHover);
     transition: .5s;
     cursor: pointer;
@@ -148,6 +158,11 @@ body {
     justify-content: start;
     border: none;
     padding: 5px 5px 5px 10px;
+    cursor: pointer;
+}
+
+.filtro option:hover{
+    cursor: pointer;
 }
 
 .pesquisar {
@@ -201,10 +216,11 @@ body {
 
 .lista{
     margin-top: 20px;
+    width: 100%;
     
 }
 
-.lista,.linha,.icons{
+.linha,.icons{
     display: flex;
     width: 100%;
   
@@ -215,14 +231,80 @@ body {
     color: var(--cinza);
     font-family: var(--fonte);
     padding: 9px;
+    font-size: 15px;
+    cursor: default;
+    align-items: center;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--fundo);
 }
+
 .lista input{
     margin-left: 15px;
     margin-right: 10px ;
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
 }
 
+.linha input:checked + p {
+    text-decoration: line-through;
+    color: gray;
+}
+.linha>p{
+    width: 100%;
+}
+
+
+/* icones da linha */
 .icons{
    justify-content: end;
+   align-items: center;
 }
+
+
+
+.baixo{
+    font-size: 12px;
+    background-color: var(--fundoAzul);
+    color: var(--azul);
+    padding: 4px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+
+.medio{
+    font-size: 12px;
+    background-color: var(--fundoAmarelo);
+    color: var(--amarelo);
+    padding: 4px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+.alto{
+    font-size: 12px;
+    background-color: var(--fundoVermelho);
+    color: var(--vermelho);
+    padding: 4px 7px;
+    border-radius: 7px;
+    margin-right: 5px;  
+}
+
+
+.icons img{
+    height: 20px;
+    padding: 5px;
+    transition: .5s;
+
+}
+
+.icons img:hover{
+    background-color: var(--fundoDivHover);
+    transition: .5s;
+    cursor: pointer;
+    
+}
+
+
 
 
