@@ -220,11 +220,14 @@ body {
     
 }
 
-.linha,.icons{
+.icons{
     display: flex;
     width: 100%;
-  
 
+}
+
+.linha{
+    display: flex;
 }
 .linha{
     background-color: var(--fundoDiv);
