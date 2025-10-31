@@ -1,0 +1,24 @@
+aqui são exercicios relacionados a criação do mecanismo de busca do exercicio 7.<br>
+nesse diretorio temos 3 niveis de dificuldade:
+
+1:
+-Fazer o filtro funcionar quando digitar algo no campo (input).
+
+-Mostrar apenas os < li > que contêm o texto digitado.
+
+
+
+2:
+-Fazer a busca funcionar (igual no nível 1).
+
+-Só precisa esconder (display: none) as tarefas que não contêm o texto buscado.
+
+
+
+
+3:
+-Fazer o botão Adicionar criar novas tarefas dentro de #lista.
+
+-Fazer o campo Buscar filtrar todas as tarefas (inclusive as novas).
+
+-Bônus: adicionar botão “Excluir” que remove a tarefa.

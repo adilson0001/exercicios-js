@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef;
+  padding: 20px;
+}
+
+h1 {
+  color: #222;
+}
+
+#campoBusca {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.linha p {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
