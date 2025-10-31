@@ -247,6 +247,7 @@ body {
     height: 21px;
     width: 21px;
     cursor: pointer;
+    accent-color: gray;
 }
 
 .linha input:checked + p {
