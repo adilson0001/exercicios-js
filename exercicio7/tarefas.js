@@ -3,6 +3,7 @@ const btn = document.getElementById("btn");
 const campo = document.getElementById("campo");
 const lista = document.getElementById("lista");
 
+
 function atualizarQTD(){
     let qtd = document.querySelectorAll(".linha").length;
 if(qtd!=0){
@@ -13,8 +14,7 @@ else
     document.getElementById("total").innerHTML=0;
 };
 
-
-// estudar essa parte que filtra os checkbox true e false
+//conta a a quantidade de checkbox pendentes e concluidos
 const checkboxes = document.querySelectorAll(".linha input[type='checkbox']");
   let completas = 0;
   let pendentes = 0;
@@ -66,7 +66,7 @@ btn.addEventListener("click", () => {
   atualizarQTD();
 });
 
-//estudar isso que é a exclusão
+
 lista.addEventListener("click", (event) => {
   if (event.target.classList.contains("lixo")) {
     const linha = event.target.closest(".linha");
@@ -74,6 +74,30 @@ lista.addEventListener("click", (event) => {
   }
   atualizarQTD();
 });
+
+let busca = document.getElementById("campoBusca");
+
+busca.addEventListener("input", () => {
+  // 1. Captura o texto digitado e converte pra minúsculas
+  let textoBusca = busca.value.toLowerCase();
+
+  // 2. Seleciona todas as tarefas (as divs com classe .linha)
+  let tarefas = document.querySelectorAll(".linha");
+
+  // 3. Percorre cada tarefa
+  tarefas.forEach((tarefa) => {
+    // 4. Pega o texto dentro do <p> da tarefa
+    let textoTarefa = tarefa.querySelector("p").innerText.toLowerCase();
+
+    // 5. Verifica se o texto da tarefa contém o texto buscado
+    if (textoTarefa.includes(textoBusca)) {
+      tarefa.style.display = "flex"; // mostra a tarefa
+    } else {
+      tarefa.style.display = "none"; // esconde a tarefa
+    }
+  });
+});
+
 
 
 
