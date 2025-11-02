@@ -32,11 +32,11 @@
             </form>
         </div>
         <div class="filtros">
-            <select id="#" class="filtro">
-                <option value="A" selected>Todas</option>
-                <option value="A">Recentes</option>
-                <option value="A">Concluidas</option>
-                <option value="A">Pendentes</option>
+            <select id="fil-tarefa" class="filtro">
+                <option value="todas" selected>Todas</option>
+                <option value="recentes">Recentes</option>
+                <option value="concluidas">Concluidas</option>
+                <option value="pendentes">Pendentes</option>
             </select>
 
             <!-- a ideia de filtrar por prioridade é que voce ao adicionar a tarefa ela vem como baixa prioridade, depois voce edita o texto e a prioridade -->
@@ -58,7 +58,7 @@
         </div>
         
         <div class="lista" id="lista">
-                <div class="linha">
+                <div class="linha" id="check">
                     <input type="checkbox">
                     <p>Estudar</p>
                     <div class="icons">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
 
-                <div class="linha">
+                <div class="linha" id="check">
                     <input type="checkbox">
                     <p>Lavar Louça</p>
                     <div class="icons">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="linha">
+                <div class="linha" id="check">
                     <input type="checkbox">
                     <p>Treinar</p>
                     <div class="icons">

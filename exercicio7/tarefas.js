@@ -49,7 +49,7 @@ btn.addEventListener("click", () => {
   if (campo.value != "") {
     lista.innerHTML += `
       <div class="linha">
-        <input type="checkbox">
+        <input type="checkbox" id="check">
         <p>${addTarefa()}</p>
         <div class="icons">
           <p class="baixo">BAIXO</p>
@@ -67,6 +67,7 @@ btn.addEventListener("click", () => {
 });
 
 
+//excluir tarefa
 lista.addEventListener("click", (event) => {
   if (event.target.classList.contains("lixo")) {
     const linha = event.target.closest(".linha");
@@ -75,30 +76,65 @@ lista.addEventListener("click", (event) => {
   atualizarQTD();
 });
 
+
+//filtrar por nome da tarefa
 let busca = document.getElementById("campoBusca");
 
 busca.addEventListener("input", () => {
-  // 1. Captura o texto digitado e converte pra minúsculas
   let textoBusca = busca.value.toLowerCase();
-
-  // 2. Seleciona todas as tarefas (as divs com classe .linha)
+ 
   let tarefas = document.querySelectorAll(".linha");
 
-  // 3. Percorre cada tarefa
   tarefas.forEach((tarefa) => {
-    // 4. Pega o texto dentro do <p> da tarefa
+    
     let textoTarefa = tarefa.querySelector("p").innerText.toLowerCase();
 
-    // 5. Verifica se o texto da tarefa contém o texto buscado
+    
     if (textoTarefa.includes(textoBusca)) {
-      tarefa.style.display = "flex"; // mostra a tarefa
+      tarefa.style.display = "flex"; 
     } else {
-      tarefa.style.display = "none"; // esconde a tarefa
+      tarefa.style.display = "none";
     }
   });
 });
 
 
+// filtrar por tarefas concluidas
+
+let options = document.getElementById("fil-tarefa");
+
+
+options.addEventListener("change", ()=>{
+   let tarefas = document.querySelectorAll(".linha");
+   if(options.value=="recentes"){
+    
+  }
+
+  if(options.value=="todas"){
+    
+     tarefas.forEach(linha => {
+       linha.style.display="flex";
+     });
+  }
+
+  //tarefas concluidas
+if(options.value == "concluidas") {
+    let linhas = document.getElementsByClassName("linha");
+    for (let linha of linhas) {
+        let input = linha.querySelector('input[type="checkbox"]');
+        if(input.checked){
+            linha.style.display = "flex";
+        } else {
+            linha.style.display = "none";
+        }
+    }
+}
+
+
+  if(options.value=="pendentes"){
+    alert("PEND");
+  }
+});
 
 
 
