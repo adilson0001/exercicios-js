@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.galeria-container {
+    text-align: center;
+}
+
+.principal img {
+    width: 400px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.miniaturas img {
+    width: 100px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+}
