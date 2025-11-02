@@ -4,18 +4,17 @@ const campo = document.getElementById("campo");
 const lista = document.getElementById("lista");
 
 
-function atualizarQTD(){
-    let qtd = document.querySelectorAll(".linha").length;
-if(qtd!=0){
-    document.getElementById("total").innerHTML=qtd;
-}
-else
-{
-    document.getElementById("total").innerHTML=0;
-};
+function atualizarQTD() {
+  let qtd = document.querySelectorAll(".linha").length;
+  if (qtd != 0) {
+    document.getElementById("total").innerHTML = qtd;
+  }
+  else {
+    document.getElementById("total").innerHTML = 0;
+  };
 
-//conta a a quantidade de checkbox pendentes e concluidos
-const checkboxes = document.querySelectorAll(".linha input[type='checkbox']");
+  //conta a a quantidade de checkbox pendentes e concluidos
+  const checkboxes = document.querySelectorAll(".linha input[type='checkbox']");
   let completas = 0;
   let pendentes = 0;
 
@@ -82,16 +81,16 @@ let busca = document.getElementById("campoBusca");
 
 busca.addEventListener("input", () => {
   let textoBusca = busca.value.toLowerCase();
- 
+
   let tarefas = document.querySelectorAll(".linha");
 
   tarefas.forEach((tarefa) => {
-    
+
     let textoTarefa = tarefa.querySelector("p").innerText.toLowerCase();
 
-    
+
     if (textoTarefa.includes(textoBusca)) {
-      tarefa.style.display = "flex"; 
+      tarefa.style.display = "flex";
     } else {
       tarefa.style.display = "none";
     }
@@ -104,35 +103,48 @@ busca.addEventListener("input", () => {
 let options = document.getElementById("fil-tarefa");
 
 
-options.addEventListener("change", ()=>{
-   let tarefas = document.querySelectorAll(".linha");
-   if(options.value=="recentes"){
-    
+options.addEventListener("change", () => {
+  let tarefas = document.querySelectorAll(".linha");
+  if (options.value == "recentes") {
+
   }
 
-  if(options.value=="todas"){
-    
-     tarefas.forEach(linha => {
-       linha.style.display="flex";
-     });
+  if (options.value == "todas") {
+
+    tarefas.forEach(linha => {
+      linha.style.display = "flex";
+    });
   }
 
   //tarefas concluidas
-if(options.value == "concluidas") {
+  if (options.value == "concluidas") {
     let linhas = document.getElementsByClassName("linha");
     for (let linha of linhas) {
-        let input = linha.querySelector('input[type="checkbox"]');
-        if(input.checked){
-            linha.style.display = "flex";
-        } else {
-            linha.style.display = "none";
-        }
+      let input = linha.querySelector('input[type="checkbox"]');
+      if (input.checked) {
+        linha.style.display = "flex";
+      } else {
+        linha.style.display = "none";
+      }
     }
-}
+  }
 
-
-  if(options.value=="pendentes"){
-    alert("PEND");
+  //tarefas pendetes
+  if (options.value == "pendentes") {
+    let linhas = document.getElementsByClassName("linha");
+    for (let linha of linhas) {
+      let input = linha.querySelector('input[type="checkbox"]');
+      if (!input.checked) {
+        linha.style.display = "flex";
+      } else {
+        linha.style.display = "none";
+      }
+      input.addEventListener("change", () => {
+        if (options.value == "pendentes") {
+          linha.style.display = input.checked ? "none" : "flex";
+        }
+      });
+    }
   }
 });
 

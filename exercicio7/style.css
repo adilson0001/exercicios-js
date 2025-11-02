@@ -19,14 +19,14 @@
     --branco: white;
     --fonte: "Inter", sans-serif;
 
-    --amarelo:#FCBE08;
+    --amarelo: #FCBE08;
     --fundoAmarelo: #383526;
 
-    --azul:#17A2B2;
-    --fundoAzul:#203238;
+    --azul: #17A2B2;
+    --fundoAzul: #203238;
 
-    --vermelho:#cf222d;
-    --fundoVermelho:#34262C;
+    --vermelho: #cf222d;
+    --fundoVermelho: #34262C;
 
 
 }
@@ -89,7 +89,8 @@ body {
 /* adicionar tarefa */
 
 
-.tarefa>form,.tarefa {
+.tarefa>form,
+.tarefa {
     display: flex;
     justify-content: space-between;
     width: 101%;
@@ -161,7 +162,7 @@ body {
     cursor: pointer;
 }
 
-.filtro option:hover{
+.filtro option:hover {
     cursor: pointer;
 }
 
@@ -214,22 +215,23 @@ body {
 
 /* lista de tarefas */
 
-.lista{
+.lista {
     margin-top: 20px;
     width: 100%;
-    
+
 }
 
-.icons{
+.icons {
     display: flex;
     width: 100%;
 
 }
 
-.linha{
+.linha {
     display: flex;
 }
-.linha{
+
+.linha {
     background-color: var(--fundoDiv);
     color: var(--cinza);
     font-family: var(--fonte);
@@ -241,33 +243,34 @@ body {
     border-bottom: 2px solid var(--fundo);
 }
 
-.lista input{
+.lista input {
     margin-left: 15px;
-    margin-right: 10px ;
+    margin-right: 10px;
     height: 21px;
     width: 21px;
     cursor: pointer;
     accent-color: gray;
 }
 
-.linha input:checked + p {
+.linha input:checked+p {
     text-decoration: line-through;
     color: gray;
 }
-.linha>p{
+
+.linha>p {
     width: 100%;
 }
 
 
 /* icones da linha */
-.icons{
-   justify-content: end;
-   align-items: center;
+.icons {
+    justify-content: end;
+    align-items: center;
 }
 
 
 
-.baixo{
+.baixo {
     font-size: 12px;
     background-color: var(--fundoAzul);
     color: var(--azul);
@@ -277,7 +280,7 @@ body {
 }
 
 
-.medio{
+.medio {
     font-size: 12px;
     background-color: var(--fundoAmarelo);
     color: var(--amarelo);
@@ -285,30 +288,27 @@ body {
     border-radius: 7px;
     margin-right: 5px;
 }
-.alto{
+
+.alto {
     font-size: 12px;
     background-color: var(--fundoVermelho);
     color: var(--vermelho);
     padding: 4px 7px;
     border-radius: 7px;
-    margin-right: 5px;  
+    margin-right: 5px;
 }
 
 
-.icons img{
+.icons img {
     height: 20px;
     padding: 5px;
     transition: .5s;
 
 }
 
-.icons img:hover{
+.icons img:hover {
     background-color: var(--fundoDivHover);
     transition: .5s;
     cursor: pointer;
-    
+
 }
-
-
-
-
