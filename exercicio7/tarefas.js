@@ -105,9 +105,7 @@ let options = document.getElementById("fil-tarefa");
 
 options.addEventListener("change", () => {
   let tarefas = document.querySelectorAll(".linha");
-  if (options.value == "recentes") {
-
-  }
+  
 
   if (options.value == "todas") {
 
@@ -126,7 +124,12 @@ options.addEventListener("change", () => {
       } else {
         linha.style.display = "none";
       }
+    input.addEventListener("change", () => {
+        if (options.value == "concluidas" && !input.checked) {
+          linha.style.display = "none";
+        }});
     }
+     
   }
 
   //tarefas pendetes
