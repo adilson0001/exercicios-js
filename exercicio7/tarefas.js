@@ -106,7 +106,7 @@ let options = document.getElementById("fil-tarefa");
 options.addEventListener("change", () => {
   let tarefas = document.querySelectorAll(".linha");
   
-
+  // pra mostrar todas as tarefas 
   if (options.value == "todas") {
 
     tarefas.forEach(linha => {
@@ -150,6 +150,39 @@ options.addEventListener("change", () => {
     }
   }
 });
+
+
+
+
+// filtro por prioridade
+
+const filPrioridade = document.getElementById("fil-prioridade");
+
+filPrioridade.addEventListener("change", () => {
+  const tarefas = document.querySelectorAll(".linha");
+  const prioridadeSelecionada = filPrioridade.value; // valores: prioridades, urgente, media, baixa
+
+  tarefas.forEach(tarefa => {
+    // procura o elemento de prioridade dentro da tarefa
+    const prioridade = tarefa.querySelector(".alto, .medio, .baixo");
+
+    // mostrar todas
+    if (prioridadeSelecionada === "prioridades") {
+      tarefa.style.display = "flex";
+    }
+    // mostrar apenas as com a prioridade selecionada
+    else if (
+      (prioridadeSelecionada === "urgente" && prioridade.classList.contains("alto")) ||
+      (prioridadeSelecionada === "media" && prioridade.classList.contains("medio")) ||
+      (prioridadeSelecionada === "baixa" && prioridade.classList.contains("baixo"))
+    ) {
+      tarefa.style.display = "flex";
+    } else {
+      tarefa.style.display = "none";
+    }
+  });
+});
+
 
 
 
