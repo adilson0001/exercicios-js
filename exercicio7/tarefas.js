@@ -76,112 +76,56 @@ lista.addEventListener("click", (event) => {
 });
 
 
-//filtrar por nome da tarefa
-let busca = document.getElementById("campoBusca");
-
-busca.addEventListener("input", () => {
-  let textoBusca = busca.value.toLowerCase();
-
-  let tarefas = document.querySelectorAll(".linha");
-
-  tarefas.forEach((tarefa) => {
-
-    let textoTarefa = tarefa.querySelector("p").innerText.toLowerCase();
-
-
-    if (textoTarefa.includes(textoBusca)) {
-      tarefa.style.display = "flex";
-    } else {
-      tarefa.style.display = "none";
-    }
-  });
-});
-
-
-// filtrar por tarefas concluidas
-
-let options = document.getElementById("fil-tarefa");
-
-
-options.addEventListener("change", () => {
-  let tarefas = document.querySelectorAll(".linha");
-  
-  // pra mostrar todas as tarefas 
-  if (options.value == "todas") {
-
-    tarefas.forEach(linha => {
-      linha.style.display = "flex";
-    });
-  }
-
-  //tarefas concluidas
-  if (options.value == "concluidas") {
-    let linhas = document.getElementsByClassName("linha");
-    for (let linha of linhas) {
-      let input = linha.querySelector('input[type="checkbox"]');
-      if (input.checked) {
-        linha.style.display = "flex";
-      } else {
-        linha.style.display = "none";
-      }
-    input.addEventListener("change", () => {
-        if (options.value == "concluidas" && !input.checked) {
-          linha.style.display = "none";
-        }});
-    }
-     
-  }
-
-  //tarefas pendetes
-  if (options.value == "pendentes") {
-    let linhas = document.getElementsByClassName("linha");
-    for (let linha of linhas) {
-      let input = linha.querySelector('input[type="checkbox"]');
-      if (!input.checked) {
-        linha.style.display = "flex";
-      } else {
-        linha.style.display = "none";
-      }
-      input.addEventListener("change", () => {
-        if (options.value == "pendentes") {
-          linha.style.display = input.checked ? "none" : "flex";
-        }
-      });
-    }
-  }
-});
-
-
-
-
-// filtro por prioridade
-
+const busca = document.getElementById("campoBusca");
+const filStatus = document.getElementById("fil-tarefa");
 const filPrioridade = document.getElementById("fil-prioridade");
 
-filPrioridade.addEventListener("change", () => {
+// Função única para aplicar todos os filtros
+function aplicarFiltros() {
+  const textoBusca = busca.value.toLowerCase();
+  const status = filStatus.value;        // "todas", "concluidas", "pendentes"
+  const prioridadeSelecionada = filPrioridade.value; // "prioridades", "urgente", "media", "baixa"
+
   const tarefas = document.querySelectorAll(".linha");
-  const prioridadeSelecionada = filPrioridade.value; // valores: prioridades, urgente, media, baixa
 
   tarefas.forEach(tarefa => {
-    // procura o elemento de prioridade dentro da tarefa
+    const textoTarefa = tarefa.querySelector("p").innerText.toLowerCase();
+    const input = tarefa.querySelector('input[type="checkbox"]');
     const prioridade = tarefa.querySelector(".alto, .medio, .baixo");
 
-    // mostrar todas
-    if (prioridadeSelecionada === "prioridades") {
-      tarefa.style.display = "flex";
-    }
-    // mostrar apenas as com a prioridade selecionada
-    else if (
+    // Verifica condições individualmente
+    const condBusca = textoTarefa.includes(textoBusca) || textoBusca === "";
+    const condStatus =
+      status === "todas" ||
+      (status === "concluidas" && input.checked) ||
+      (status === "pendentes" && !input.checked);
+    const condPrioridade =
+      prioridadeSelecionada === "prioridades" ||
       (prioridadeSelecionada === "urgente" && prioridade.classList.contains("alto")) ||
       (prioridadeSelecionada === "media" && prioridade.classList.contains("medio")) ||
-      (prioridadeSelecionada === "baixa" && prioridade.classList.contains("baixo"))
-    ) {
+      (prioridadeSelecionada === "baixa" && prioridade.classList.contains("baixo"));
+
+    // Mostrar só se atender todos os filtros
+    if (condBusca && condStatus && condPrioridade) {
       tarefa.style.display = "flex";
     } else {
       tarefa.style.display = "none";
     }
   });
+}
+
+// Escuta mudanças em todos os filtros
+busca.addEventListener("input", aplicarFiltros);
+filStatus.addEventListener("change", aplicarFiltros);
+filPrioridade.addEventListener("change", aplicarFiltros);
+
+// Também reage quando marca/desmarca tarefas
+document.addEventListener("change", (e) => {
+  if (e.target.type === "checkbox") {
+    aplicarFiltros();
+  }
 });
+
 
 
 
