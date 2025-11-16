@@ -12,5 +12,6 @@
   "type": "commonjs",
   "dependencies": {
     "tailwindcss": "^3.4.18"
-  }
+  },
+  "devDependencies": {}
 }
