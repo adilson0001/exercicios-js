@@ -10,8 +10,8 @@
 </head>
 <body class="text-gray-600 font-body">
 
-<div class=""> <!-- Content wraper -->
-    <div class="">
+<div class="grid md:grid-cols-3"> <!-- Content wraper -->
+    <div class="md:col-span-1">
         <nav>
             <div class="">
                 <h1 class="font-bold uppercase p-4 border-b border-gray-100 font-nunito">
@@ -38,7 +38,7 @@
         </nav>
     </div><!-- end nav -->
 
-    <main class="px-16 py-16 bg-gray-100">
+    <main class="px-16 py-16 bg-gray-100 md:col-span-2">
 
         <div class="flex justify-center md:justify-end">
             <a href="#" class="text-primary">Log in</a>
@@ -53,17 +53,41 @@
         <div class="">
             <h4 class="font-hold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
 
-            <div class="mt-8">
+            <div class="mt-8 grid lg:grid-cols-3 gap-10">
                 <!-- card go there -->
-                 <div class="bg-white rounded  shadow-md overflow-hidden">
+                 <div class="card">
                     <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
                     <div class="m-4">
                         <span class="font-bold">Bean Chilli Stew</span>
                         <span class="block text-gray-500 text-sm">Recipe by Mario</span>                        
                     </div>
 
-                    <div class="">
-                        <span>25 mins</span>
+                    <div class="badge">
+                        <span class="">25 mins</span>
+                    </div>
+                 </div>
+
+                 <div class="card">
+                    <img src="img/noodles.jpg" alt="noodles" class="w-full h-32 sm:h-48 object-cover">
+                    <div class="m-4">
+                        <span class="font-bold">Vegan Noodles</span>
+                        <span class="block text-gray-500 text-sm">Recipe by Mario</span>                        
+                    </div>
+
+                    <div class="badge">
+                        <span class="">25 mins</span>
+                    </div>
+                 </div>
+
+                 <div class="card">
+                    <img src="img/curry.jpg" alt="curry" class="w-full h-32 sm:h-48 object-cover">
+                    <div class="m-4">
+                        <span class="font-bold">Tofu Curry</span>
+                        <span class="block text-gray-500 text-sm">Recipe by Mario</span>                        
+                    </div>
+
+                    <div class="badge">
+                        <span class="">25 mins</span>
                     </div>
                  </div>
             </div>
