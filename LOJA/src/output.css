@@ -9,6 +9,8 @@
       "Courier New", monospace;
     --color-green-800: oklch(44.8% 0.119 151.328);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -163,23 +165,71 @@
   }
 }
 @layer utilities {
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
+  }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+  .h-70 {
+    height: calc(var(--spacing) * 70);
+  }
+  .h-\[20\%\] {
+    height: 20%;
+  }
+  .h-\[25\%\] {
+    height: 25%;
+  }
+  .h-\[30\%\] {
+    height: 30%;
+  }
+  .h-\[70\] {
+    height: 70;
+  }
+  .h-\[100\] {
+    height: 100;
   }
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
+  }
+  .w-0 {
+    width: calc(var(--spacing) * 0);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-70 {
+    width: calc(var(--spacing) * 70);
+  }
+  .w-\[20\%\] {
+    width: 20%;
+  }
+  .w-\[25\%\] {
+    width: 25%;
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[70\] {
+    width: 70;
+  }
+  .w-\[100\] {
+    width: 100;
   }
   .w-full {
     width: 100%;
@@ -202,18 +252,51 @@
   .justify-around {
     justify-content: space-around;
   }
-  .justify-center {
-    justify-content: center;
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#0B0809\] {
+    background-color: #0B0809;
+  }
+  .bg-\[\#1F1B1B\] {
+    background-color: #1F1B1B;
+  }
+  .bg-\[\#2e282b\] {
+    background-color: #2e282b;
+  }
+  .bg-\[\#302d2d\] {
+    background-color: #302d2d;
+  }
+  .bg-\[\#312c2c\] {
+    background-color: #312c2c;
+  }
+  .bg-\[\#161113\] {
+    background-color: #161113;
+  }
+  .bg-\[\#272023\] {
+    background-color: #272023;
+  }
+  .bg-\[\#af3268\] {
+    background-color: #af3268;
+  }
+  .bg-\[272023\] {
+    background-color: 272023;
+  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
   .bg-green-800 {
     background-color: var(--color-green-800);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
