@@ -1,0 +1,131 @@
+✅ EXERCÍCIO 1 — Posição: relative e absolute
+Objetivo:
+
+Aprender a colocar um texto por cima de uma imagem usando position: absolute.
+
+Tarefa:
+
+Crie uma caixa com uma imagem e coloque um texto centralizado em cima dela.
+
+O que deve aprender:
+
+position: relative
+
+position: absolute
+
+inset: 0 (top, bottom, left, right = 0)
+
+Centralizar com flexbox
+
+Exemplo do que você deve tentar reproduzir:
+[ IMAGEM ]
+   TEXTO EM CIMA
+
+
+Instruções:
+
+Crie uma div com position: relative.
+
+Coloque uma imagem dentro.
+
+Crie outra div por cima com position: absolute.
+
+Deixe essa div ocupar toda a área da imagem.
+
+Centralize o texto com flexbox.
+
+
+
+✅ EXERCÍCIO 2 — Transições e Opacidade
+Objetivo:
+
+Aprender a fazer um elemento aparecer e desaparecer usando transition e opacity.
+
+Tarefa:
+
+Pegue o texto do Exercício 1 e deixe ele invisível.
+Quando passar o mouse na imagem, o texto deve aparecer suavemente.
+
+O que deve aprender:
+
+opacity: 0
+
+opacity: 1
+
+transition: 0.3s
+
+div:hover .texto (selecionar filho no hover do pai)
+
+Desafio:
+
+Crie o seguinte comportamento:
+
+Normal: texto invisível
+
+Ao passar o mouse: texto aparece suavemente
+
+
+
+
+✅ EXERCÍCIO 3 — Escurecer a imagem com hover
+Objetivo:
+
+Aprender a escurecer a imagem usando CSS no hover.
+
+Tarefa:
+
+Use o mesmo layout do exercício anterior, mas agora:
+
+Quando passar o mouse, a imagem fica mais escura.
+
+Continue usando transition.
+
+O que deve aprender:
+
+filter: brightness(50%)
+
+transition
+
+Usar div:hover img { … }
+
+Desafio:
+
+Escureça a imagem suavemente enquanto o texto aparece.
+
+✅ EXERCÍCIO 4 — Montar o efeito final completo
+Objetivo:
+
+Agora você junta tudo:
+
+Imagem
+
+Texto centralizado por cima
+
+Texto aparece no hover
+
+Imagem escurece no hover
+
+Tudo suave
+
+Tarefa:
+
+Reproduzir o efeito final completo:
+
+✔️ Imagem normal
+✔️ Ao passar o mouse → a imagem escurece
+✔️ Texto aparece com fade
+✔️ Tudo com transição suave
+
+O que deve aplicar:
+
+position: relative
+
+position: absolute
+
+flexbox
+
+transition
+
+opacity
+
+brightness()
