@@ -1,42 +1,45 @@
+
 .card{
-    position: relative;
-    width: 60%;
     height: 200px;
-    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    border-radius: 15px;
     overflow: hidden;
-    display: inline-block;
+
 }
 
-/* Imagem */
-.card img{
-    width: 100%;
+
+.card:hover .texto{
+    opacity: 1;
+    transition: 0.6s;
+}
+img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    transition: 0.3s;
+    
 }
 
-/* Escurecer imagem no hover */
-.card:hover img{
-    filter: brightness(50%);
-}
-
-/* Overlay do texto */
 .texto{
     position: absolute;
     inset: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 400px;
+    opacity: 0;
+    transition: 0.4s;
     
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
     color: white;
-
-    opacity: 0;              /* invisível inicialmente */
-    transition: 0.3s;        /* fade suave */
-    padding: 20px;
 }
 
-/* Texto aparece no hover */
-.card:hover .texto{
-    opacity: 1;
-}
+
+
+
